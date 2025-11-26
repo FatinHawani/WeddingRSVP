@@ -34,10 +34,10 @@ const Entrance = ({ onEnter }: { onEnter: () => void }) => {
                             <MailOpen size={48} strokeWidth={1} />
                         </div>
                         <h1 className="font-serif text-3xl text-stone-800 mb-2">
-                            Groom & Bride
+                            Hanis & Fatin
                         </h1>
                         <p className="text-stone-500 text-sm uppercase tracking-widest mb-8">
-                            Wedding Invitation
+                            Jemputan Majlis Walimatul Urus
                         </p>
                         <div className="animate-pulse text-stone-400 text-xs tracking-wider">
                             Tap to Open

@@ -2,27 +2,40 @@
 
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
+import { useState } from 'react';
+import Modal from '../ui/Modal';
 
 const FormalText = () => {
-    const handleSaveDate = () => {
-        // Generate .ics file content
-        const event = {
-            title: "Wedding of Groom & Bride",
-            description: "Join us for our wedding celebration!",
-            location: "Glass House Glenmarie",
-            startTime: "2025-12-26T11:00:00",
-            endTime: "2025-12-26T17:00:00",
-        };
+    const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
 
-        // Simple .ics generation logic (mock for now, or simple string construction)
+    const eventDetails = {
+        title: "Walimatul Urus Hanis & Fatin",
+        description: "Jemputan Majlis Walimatul Urus Hanis & Fatin",
+        location: "Glass House Glenmarie, Jalan Glenmarie, Hicom-glenmarie Industrial Park, 40150 Shah Alam, Selangor",
+        startTime: "20260201T110000", // YYYYMMDDTHHMMSS
+        endTime: "20260201T160000",
+    };
+
+    const generateGoogleCalendarUrl = () => {
+        const baseUrl = "https://calendar.google.com/calendar/u/0/r/eventedit";
+        const params = new URLSearchParams({
+            text: eventDetails.title,
+            details: eventDetails.description,
+            location: eventDetails.location,
+            dates: `${eventDetails.startTime}/${eventDetails.endTime}`,
+        });
+        return `${baseUrl}?${params.toString()}`;
+    };
+
+    const downloadICS = () => {
         const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
-SUMMARY:${event.title}
-DESCRIPTION:${event.description}
-LOCATION:${event.location}
-DTSTART:${event.startTime.replace(/[-:]/g, '')}
-DTEND:${event.endTime.replace(/[-:]/g, '')}
+SUMMARY:${eventDetails.title}
+DESCRIPTION:${eventDetails.description}
+LOCATION:${eventDetails.location}
+DTSTART:${eventDetails.startTime}
+DTEND:${eventDetails.endTime}
 END:VEVENT
 END:VCALENDAR`;
 
@@ -33,6 +46,7 @@ END:VCALENDAR`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        setIsCalendarModalOpen(false);
     };
 
     return (
@@ -45,15 +59,15 @@ END:VCALENDAR`;
                 className="space-y-6"
             >
                 <p className="text-stone-500 font-medium">
-                    Together with their families
+                    Dengan penuh kesyukuran ke hadrat Ilahi
                 </p>
                 <div className="space-y-2">
-                    <p className="text-xl font-serif text-stone-800">Mr. & Mrs. Groom Parents</p>
+                    <p className="text-xl font-serif text-stone-800">Keluarga Pengantin Lelaki</p>
                     <p className="text-stone-400 text-sm">&</p>
-                    <p className="text-xl font-serif text-stone-800">Mr. & Mrs. Bride Parents</p>
+                    <p className="text-xl font-serif text-stone-800">Keluarga Pengantin Perempuan</p>
                 </div>
                 <p className="text-stone-500 font-medium mt-8">
-                    Cordially invite you to celebrate the wedding of their children
+                    Menjemput Dato'/Datin/Tuan/Puan/Encik/Cik ke majlis perkahwinan putera-puteri kami
                 </p>
             </motion.div>
 
@@ -74,7 +88,7 @@ END:VCALENDAR`;
 
                 <div className="pt-4">
                     <button
-                        onClick={handleSaveDate}
+                        onClick={() => setIsCalendarModalOpen(true)}
                         className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-full hover:bg-stone-700 transition-colors shadow-md"
                     >
                         <Calendar size={18} />
@@ -82,6 +96,37 @@ END:VCALENDAR`;
                     </button>
                 </div>
             </motion.div>
+
+            <Modal
+                isOpen={isCalendarModalOpen}
+                onClose={() => setIsCalendarModalOpen(false)}
+                title="Save The Date"
+            >
+                <div className="flex flex-col gap-3">
+                    <a
+                        href={generateGoogleCalendarUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 w-full p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-colors group"
+                        onClick={() => setIsCalendarModalOpen(false)}
+                    >
+                        <img
+                            src="https://www.google.com/calendar/images/google_calendar_icon_2020_2020_q4_48dp.png"
+                            alt="Google Calendar"
+                            className="w-6 h-6"
+                        />
+                        <span className="font-medium text-stone-700 group-hover:text-stone-900">Google Calendar</span>
+                    </a>
+
+                    <button
+                        onClick={downloadICS}
+                        className="flex items-center justify-center gap-3 w-full p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-colors group"
+                    >
+                        <Calendar className="w-6 h-6 text-stone-600" />
+                        <span className="font-medium text-stone-700 group-hover:text-stone-900">Apple Calendar / Outlook</span>
+                    </button>
+                </div>
+            </Modal>
         </section>
     );
 };

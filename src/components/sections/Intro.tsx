@@ -12,24 +12,24 @@ const Intro = () => {
                 viewport={{ once: true }}
             >
                 <p className="text-stone-500 uppercase tracking-[0.2em] text-sm md:text-base mb-4">
-                    The Wedding of
+                    Walimatul Urus
                 </p>
                 <h1 className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight">
-                    Groom Name
+                    Hanis
                 </h1>
                 <div className="text-4xl md:text-6xl text-rose-400 my-4 font-serif italic">
                     &
                 </div>
                 <h1 className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight">
-                    Bride Name
+                    Fatin
                 </h1>
                 <div className="mt-12 flex flex-col items-center gap-2">
                     <div className="h-16 w-[1px] bg-stone-300 mb-4" />
                     <p className="text-stone-600 font-medium text-lg tracking-wide">
-                        Friday
+                        Ahad
                     </p>
                     <p className="text-stone-800 font-serif text-3xl">
-                        December 26, 2025
+                        1 Februari 2026
                     </p>
                 </div>
             </motion.div>
