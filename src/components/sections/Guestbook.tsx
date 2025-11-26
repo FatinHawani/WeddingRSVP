@@ -90,8 +90,8 @@ const Guestbook = () => {
                 viewport={{ once: true }}
                 className="text-center mb-12"
             >
-                <h2 className="font-serif text-3xl text-stone-800 mb-2">Wishes</h2>
-                <p className="text-stone-500 text-sm uppercase tracking-widest">Guestbook</p>
+                <h2 className="font-serif text-3xl text-stone-800 mb-2">Guestbook</h2>
+                {/*<p className="text-stone-500 text-sm uppercase tracking-widest">Wishes</p> */}
             </motion.div>
 
             {/* Carousel */}
@@ -131,12 +131,12 @@ const Guestbook = () => {
                     className="inline-flex items-center gap-2 px-8 py-3 bg-rose-400 text-white rounded-full hover:bg-rose-500 transition-colors shadow-md"
                 >
                     <Send size={18} />
-                    <span>Send Wishes</span>
+                    <span>Hantarkan Ucapan</span>
                 </button>
             </div>
 
             {/* Wish Input Modal */}
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Send Wishes">
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Ucapan">
                 <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                         <label className="block text-sm font-medium text-stone-600 mb-1">Name</label>

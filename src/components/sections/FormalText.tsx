@@ -11,7 +11,7 @@ const FormalText = () => {
     const eventDetails = {
         title: "Walimatul Urus Hanis & Fatin",
         description: "Jemputan Majlis Walimatul Urus Hanis & Fatin",
-        location: "Glass House Glenmarie, Jalan Glenmarie, Hicom-glenmarie Industrial Park, 40150 Shah Alam, Selangor",
+        location: "La Pelangi Club House Tmn. Pelangi Semenyih, Taman Pelangi Semenyih, 43500 Semenyih, Selangor",
         startTime: "20260201T110000", // YYYYMMDDTHHMMSS
         endTime: "20260201T160000",
     };
@@ -69,6 +69,11 @@ END:VCALENDAR`;
                 <p className="text-stone-500 font-medium mt-8">
                     Menjemput Dato'/Datin/Tuan/Puan/Encik/Cik ke majlis perkahwinan putera-puteri kami
                 </p>
+                <div className="space-y-2">
+                    <p className="text-xl font-serif text-stone-800">Nama Pengantin Lelaki</p>
+                    <p className="text-stone-400 text-sm">&</p>
+                    <p className="text-xl font-serif text-stone-800">Nama Pengantin Perempuan</p>
+                </div>
             </motion.div>
 
             <motion.div
@@ -79,10 +84,9 @@ END:VCALENDAR`;
                 className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/50 space-y-6"
             >
                 <div className="space-y-2">
-                    <h3 className="text-2xl font-serif text-stone-800">Glass House Glenmarie</h3>
+                    <h3 className="text-2xl font-serif text-stone-800">La Pelangi Club House</h3>
                     <p className="text-stone-600">
-                        Jalan Glenmarie, Hicom-glenmarie Industrial Park,<br />
-                        40150 Shah Alam, Selangor
+                        Taman Pelangi Semenyih, 43500 Semenyih, Selangor
                     </p>
                 </div>
 

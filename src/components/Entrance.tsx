@@ -37,7 +37,7 @@ const Entrance = ({ onEnter }: { onEnter: () => void }) => {
                             Hanis & Fatin
                         </h1>
                         <p className="text-stone-500 text-sm uppercase tracking-widest mb-8">
-                            Jemputan Majlis Walimatul Urus
+                            Jemputan Walimatul Urus
                         </p>
                         <div className="animate-pulse text-stone-400 text-xs tracking-wider">
                             Tap to Open

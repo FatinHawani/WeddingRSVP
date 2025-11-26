@@ -20,8 +20,8 @@ const Program = () => {
                 viewport={{ once: true }}
                 className="text-center mb-12"
             >
-                <h2 className="font-serif text-3xl text-stone-800 mb-2">Program</h2>
-                <p className="text-stone-500 text-sm uppercase tracking-widest">Tentative Schedule</p>
+                <h2 className="font-serif text-3xl text-stone-800 mb-2">Tentatif Majlis</h2>
+                {/*<p className="text-stone-500 text-sm uppercase tracking-widest">Tentative Schedule</p>*/}
             </motion.div>
 
             <div className="space-y-4">

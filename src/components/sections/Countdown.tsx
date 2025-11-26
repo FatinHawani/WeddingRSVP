@@ -12,7 +12,7 @@ const Countdown = () => {
     });
 
     useEffect(() => {
-        const targetDate = new Date('2025-12-26T00:00:00');
+        const targetDate = new Date('2026-02-01T00:00:00');
 
         const interval = setInterval(() => {
             const now = new Date();
@@ -41,14 +41,15 @@ const Countdown = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
-                <h2 className="font-serif text-3xl text-stone-800 mb-8">Counting Down</h2>
+                <h2 className="font-serif text-3xl text-stone-800 mb-8">Menghitung Hari</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-rose-500 mb-8 animate-pulse delay-300">1 Februari 2026</h2>
 
                 <div className="flex justify-center gap-4 md:gap-8">
                     {[
-                        { label: 'Days', value: timeLeft.days },
-                        { label: 'Hours', value: timeLeft.hours },
-                        { label: 'Minutes', value: timeLeft.minutes },
-                        { label: 'Seconds', value: timeLeft.seconds },
+                        { label: 'Hari', value: timeLeft.days },
+                        { label: 'Jam', value: timeLeft.hours },
+                        { label: 'Minit', value: timeLeft.minutes },
+                        { label: 'Saat', value: timeLeft.seconds },
                     ].map((item, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="bg-white/60 backdrop-blur-sm w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-md flex items-center justify-center border border-white/50 mb-2">

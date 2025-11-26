@@ -9,9 +9,9 @@ interface LocationModalProps {
 }
 
 const LocationModal = ({ isOpen, onClose }: LocationModalProps) => {
-    const address = "Glass House Glenmarie, Jalan Glenmarie, Hicom-glenmarie Industrial Park, 40150 Shah Alam, Selangor";
-    const wazeUrl = "https://waze.com/ul?q=Glass%20House%20Glenmarie";
-    const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Glass+House+Glenmarie";
+    const address = "La Pelangi Club House Tmn. Pelangi Semenyih, Taman Pelangi Semenyih, 43500 Semenyih, Selangor";
+    const wazeUrl = "https://waze.com/ul?q=La%20Pelangi%20Club%20House%20Tmn.%20Pelangi%20Semenyih";
+    const googleMapsUrl = "https://maps.app.goo.gl/gQCgFJS1WadRNYtJ8";
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} title="Location">
@@ -20,7 +20,7 @@ const LocationModal = ({ isOpen, onClose }: LocationModalProps) => {
                     <div className="flex items-start gap-3">
                         <MapPin className="text-rose-500 shrink-0 mt-1" size={20} />
                         <div>
-                            <h3 className="font-serif text-lg text-stone-800">Glass House Glenmarie</h3>
+                            <h3 className="font-serif text-lg text-stone-800">La Pelangi Club House</h3>
                             <p className="text-stone-600 text-sm leading-relaxed mt-1">
                                 {address}
                             </p>

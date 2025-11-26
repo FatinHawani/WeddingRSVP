@@ -100,7 +100,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
             {status === 'confirm-update' ? (
                 <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200 text-center space-y-4">
                     <p className="text-yellow-800 text-sm">
-                        This number has been registered. Are you sure you want to update your RSVP?
+                        Nombor ini telah didaftarkan. Adakah anda ingin mengemaskini RSVP anda?
                     </p>
                     <div className="flex gap-2 justify-center">
                         <button
@@ -122,7 +122,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
             ) : (
                 <>
                     <div>
-                        <label className="block text-sm font-medium text-stone-600 mb-1">Full Name</label>
+                        <label className="block text-sm font-medium text-stone-600 mb-1">Nama Penuh</label>
                         <input
                             type="text"
                             name="name"
@@ -135,7 +135,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-stone-600 mb-1">Phone Number</label>
+                        <label className="block text-sm font-medium text-stone-600 mb-1">Nombor Telefon</label>
                         <input
                             type="tel"
                             name="phone"
@@ -158,7 +158,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                             />
                             <div className="w-11 h-6 bg-stone-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-rose-100 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-400"></div>
                             <span className="ml-3 text-sm font-medium text-stone-700">
-                                {formData.attending ? 'Attending' : 'Not Attending'}
+                                {formData.attending ? 'Hadir' : 'Tidak Hadir'}
                             </span>
                         </label>
                     </div>
@@ -166,7 +166,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                     {formData.attending && (
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-stone-600 mb-1">Adults (18+)</label>
+                                <label className="block text-sm font-medium text-stone-600 mb-1">Dewasa</label>
                                 <select
                                     name="adults"
                                     value={formData.adults}
@@ -179,14 +179,14 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                                 </select>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-stone-600 mb-1">Kids (6-17)</label>
+                                <label className="block text-sm font-medium text-stone-600 mb-1">Kanak-kanak (6-17)</label>
                                 <select
                                     name="kids"
                                     value={formData.kids}
                                     onChange={handleChange}
                                     className="w-full px-4 py-2 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-rose-200"
                                 >
-                                    {[0, 1, 2, 3, 4, 5].map(num => (
+                                    {[0, 1, 2, 3, 4, 5, 6, 7].map(num => (
                                         <option key={num} value={num}>{num}</option>
                                     ))}
                                 </select>

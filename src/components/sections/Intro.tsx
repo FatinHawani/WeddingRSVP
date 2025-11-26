@@ -28,7 +28,7 @@ const Intro = () => {
                     <p className="text-stone-600 font-medium text-lg tracking-wide">
                         Ahad
                     </p>
-                    <p className="text-stone-800 font-serif text-3xl">
+                    <p className="text-stone-800 font-[Open_Sans] text-3xl">
                         1 Februari 2026
                     </p>
                 </div>
