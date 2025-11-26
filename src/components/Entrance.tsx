@@ -30,9 +30,9 @@ const Entrance = ({ onEnter }: { onEnter: () => void }) => {
                     <div className="absolute inset-0 bg-white/30 backdrop-blur-sm" />
 
                     <motion.div
-                        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                        initial={{ scale: 0.9, opacity: 0, y: 30 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
+                        transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
                         className="relative z-10 bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full mx-4 text-center border border-stone-100 overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-[url('/bg-placeholder.png')] bg-cover bg-center opacity-30 blur-[2px]" />

@@ -36,7 +36,7 @@ const FlowerEffect = () => {
             delay: flower.delay,
             ease: 'linear',
           }}
-          className="absolute text-orange-300/20"
+          className="absolute text-amber-300/20"
         >
           <Flower size={24} />
         </motion.div>

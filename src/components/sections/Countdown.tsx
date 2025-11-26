@@ -36,15 +36,15 @@ const Countdown = () => {
     return (
         <section className="py-20 px-4 text-center">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true }}
             >
                 <h2 className="font-serif text-3xl text-stone-800 mb-8">Menghitung Hari</h2>
-                <h2 className="font-[Open_Sans] text-2xl text-amber-400">Ahad</h2>
-                <h2 className="font-[Open_Sans] text-2xl text-amber-400 mb-2 ">1 Februari 2026</h2>
-                <h2 className="font-[Open_Sans] text-2xl text-amber-400 mb-8 ">١٤٤٧ شعبان ١٣ </h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-300">Ahad</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-300 mb-2 ">1 Februari 2026</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-300 mb-8 ">١٤٤٧ شعبان ١٣ </h2>
 
 
 

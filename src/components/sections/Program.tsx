@@ -15,11 +15,11 @@ const Program = () => {
     return (
         <section className="py-20 px-4 max-w-md mx-auto">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
+                className="text-center mb-8"
             >
                 <h2 className="font-serif text-3xl text-stone-800 mb-2">Tentatif Majlis</h2>
                 {/*<p className="text-stone-500 text-sm uppercase tracking-widest">Tentative Schedule</p>*/}
@@ -29,9 +29,9 @@ const Program = () => {
                 {schedule.map((item, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
                         viewport={{ once: true }}
                         className="flex items-center gap-4 bg-white/40 backdrop-blur-md p-4 rounded-xl shadow-sm border border-white/50"
                     >

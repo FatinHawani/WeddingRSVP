@@ -10,15 +10,16 @@ const FormalText = () => {
 
     const eventDetails = {
         title: "Walimatul Urus Hanis & Fatin",
-        description: "Jemputan Majlis Walimatul Urus Hanis & Fatin",
-        location: "La Pelangi Club House Tmn. Pelangi Semenyih, Taman Pelangi Semenyih, 43500 Semenyih, Selangor",
-        startTime: "20260201T110000", // YYYYMMDDTHHMMSS
-        endTime: "20260201T160000",
+        description: "Jemputan Majlis Walimatul Urus Hanis & Fatin\n\nSurau di kiri dewan",
+        location: "La Pelangi Club House, Taman Pelangi Semenyih, 43500 Semenyih, Selangor",
+        startTime: "20260201T194500", // 7:45 PM - YYYYMMDDTHHMMSS format
+        endTime: "20260201T224500",   // 10:45 PM
     };
 
     const generateGoogleCalendarUrl = () => {
-        const baseUrl = "https://calendar.google.com/calendar/u/0/r/eventedit";
+        const baseUrl = "https://www.google.com/calendar/render";
         const params = new URLSearchParams({
+            action: "TEMPLATE",
             text: eventDetails.title,
             details: eventDetails.description,
             location: eventDetails.location,
@@ -52,9 +53,9 @@ END:VCALENDAR`;
     return (
         <section className="py-20 px-4 text-center space-y-12 max-w-2xl mx-auto">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="space-y-6"
             >
@@ -79,7 +80,7 @@ END:VCALENDAR`;
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 1.4, delay: 0.3, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/50 space-y-6"
             >
@@ -115,7 +116,7 @@ END:VCALENDAR`;
                         onClick={() => setIsCalendarModalOpen(false)}
                     >
                         <img
-                            src="https://www.google.com/calendar/images/google_calendar_icon_2020_2020_q4_48dp.png"
+                            src="https://img.icons8.com/?size=100&id=WKF3bm1munsk&format=png&color=000000"
                             alt="Google Calendar"
                             className="w-6 h-6"
                         />

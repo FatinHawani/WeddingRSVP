@@ -84,9 +84,9 @@ const Guestbook = () => {
     return (
         <section className="py-20 px-4 overflow-hidden">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="text-center mb-12"
             >
@@ -128,7 +128,7 @@ const Guestbook = () => {
             <div className="text-center">
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-amber-300 text-white rounded-full hover:bg-amber-400 transition-colors shadow-md "
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-white rounded-full hover:bg-amber-300 transition-colors shadow-md "
                 >
                     <Send size={18} />
                     <span>Hantarkan Ucapan</span>
