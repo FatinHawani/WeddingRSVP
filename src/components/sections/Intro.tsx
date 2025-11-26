@@ -2,36 +2,101 @@
 
 import { motion } from 'framer-motion';
 
-const Intro = () => {
+const Intro = ({ hasEntered }: { hasEntered: boolean }) => {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center text-center space-y-8 py-20">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    show: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.3,
+                            delayChildren: 0.2
+                        }
+                    }
+                }}
+                initial="hidden"
+                animate={hasEntered ? "show" : "hidden"}
             >
-                <p className="text-stone-500 uppercase tracking-[0.2em] text-sm md:text-base mb-4">
-                    Walimatul Urus
-                </p>
-                <h1 className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight">
-                    Hanis
-                </h1>
-                <div className="text-4xl md:text-6xl text-rose-400 my-4 font-serif italic">
-                    &
-                </div>
-                <h1 className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight">
-                    Fatin
-                </h1>
-                <div className="mt-12 flex flex-col items-center gap-2">
-                    <div className="h-16 w-[1px] bg-stone-300 mb-4" />
-                    <p className="text-stone-600 font-medium text-lg tracking-wide">
+                <motion.p
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                    }}
+                    className="text-stone-500 uppercase tracking-[0.2em] text-sm md:text-base mb-4"
+                >
+                    وليمة العرس
+                </motion.p>
+                <motion.h1
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                    }}
+                    className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight"
+                >
+                    حانيس
+                </motion.h1>
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, scale: 0.8 },
+                        show: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
+                    }}
+                    className="text-4xl md:text-6xl text-amber-300 my-4 font-serif italic"
+                >
+                    و
+                </motion.div>
+                <motion.h1
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                    }}
+                    className="font-serif text-6xl md:text-8xl text-stone-800 leading-tight"
+                >
+                    فاتين
+                </motion.h1>
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0 },
+                        show: { opacity: 1, transition: { staggerChildren: 0.2 } }
+                    }}
+                    className="mt-12 flex flex-col items-center gap-2"
+                >
+                    <motion.div
+                        variants={{
+                            hidden: { height: 0 },
+                            show: { height: 64, transition: { duration: 0.8 } }
+                        }}
+                        className="w-[1px] bg-stone-300 mb-4"
+                    />
+                    <motion.p
+                        variants={{
+                            hidden: { opacity: 0, y: 10 },
+                            show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                        }}
+                        className="text-amber-400 font-[Open_Sans] text-3xl"
+                    >
                         Ahad
-                    </p>
-                    <p className="text-stone-800 font-[Open_Sans] text-3xl">
+                    </motion.p>
+                    <motion.p
+                        variants={{
+                            hidden: { opacity: 0, y: 10 },
+                            show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                        }}
+                        className="text-amber-400 font-[Open_Sans] text-3xl"
+                    >
                         1 Februari 2026
-                    </p>
-                </div>
+                    </motion.p>
+                    <motion.p
+                        variants={{
+                            hidden: { opacity: 0, y: 10 },
+                            show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                        }}
+                        className="text-amber-400 font-[Open_Sans] text-3xl"
+                    >
+                        ١٤٤٧ شعبان ١٣
+                    </motion.p>
+                </motion.div>
             </motion.div>
         </section>
     );

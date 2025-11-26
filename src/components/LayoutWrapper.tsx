@@ -20,7 +20,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             {/* Fixed Background */}
             <div className="fixed inset-0 z-0">
                 {/* Placeholder for background image - replace with actual image later */}
-                <div className="absolute inset-0 bg-[url('/bg-placeholder.jpg')] bg-cover bg-center opacity-20" />
+                <div className="absolute inset-0 bg-[url('/bg-placeholder.png')] bg-cover bg-center opacity-50" />
                 <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-stone-100/80" />
             </div>
 

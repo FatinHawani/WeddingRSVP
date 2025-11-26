@@ -42,7 +42,11 @@ const Countdown = () => {
                 viewport={{ once: true }}
             >
                 <h2 className="font-serif text-3xl text-stone-800 mb-8">Menghitung Hari</h2>
-                <h2 className="font-[Open_Sans] text-2xl text-rose-500 mb-8 animate-pulse delay-300">1 Februari 2026</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-400">Ahad</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-400 mb-2 ">1 Februari 2026</h2>
+                <h2 className="font-[Open_Sans] text-2xl text-amber-400 mb-8 ">١٤٤٧ شعبان ١٣ </h2>
+
+
 
                 <div className="flex justify-center gap-4 md:gap-8">
                     {[
@@ -53,7 +57,7 @@ const Countdown = () => {
                     ].map((item, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="bg-white/60 backdrop-blur-sm w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-md flex items-center justify-center border border-white/50 mb-2">
-                                <span className="text-2xl md:text-3xl font-serif text-rose-500 font-medium">
+                                <span className="text-2xl md:text-3xl font-serif text-amber-400 font-medium animate-pulse delay-300">
                                     {item.value}
                                 </span>
                             </div>

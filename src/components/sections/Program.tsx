@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 
 const Program = () => {
     const schedule = [
-        { time: "11:00 AM", event: "Lunch Starts" },
-        { time: "12:30 PM", event: "Arrival of Bride & Groom" },
-        { time: "01:00 PM", event: "Toast & Cake Cutting" },
-        { time: "02:00 PM", event: "Photography Session" },
-        { time: "05:00 PM", event: "End of Event" },
+        { time: "07:45 PM", event: "Kehadiran tetamu" },
+        { time: "08:00 PM", event: "Jamuan makan" },
+        { time: "09:30 PM", event: "Ketibaan Pengantin" },
+        { time: "09:45 PM", event: "Bacaan doa" },
+        { time: "10:00 PM", event: "Akad Nikah" },
+        { time: "10:45 PM", event: "Bergambar & Majlis bersurai" },
     ];
 
     return (
@@ -34,7 +35,7 @@ const Program = () => {
                         viewport={{ once: true }}
                         className="flex items-center gap-4 bg-white/40 backdrop-blur-md p-4 rounded-xl shadow-sm border border-white/50"
                     >
-                        <div className="w-24 font-medium text-rose-500 text-right shrink-0">
+                        <div className="w-24 font-medium text-amber-400 text-right shrink-0">
                             {item.time}
                         </div>
                         <div className="w-[1px] h-8 bg-stone-300" />
