@@ -9,7 +9,7 @@ interface LocationModalProps {
 }
 
 const LocationModal = ({ isOpen, onClose }: LocationModalProps) => {
-    const address = "La Pelangi Club House Tmn. Pelangi Semenyih, Taman Pelangi Semenyih, 43500 Semenyih, Selangor";
+    const address = "Taman Pelangi Semenyih, 43500 Semenyih, Selangor";
     const wazeUrl = "https://waze.com/ul?q=La%20Pelangi%20Club%20House%20Tmn.%20Pelangi%20Semenyih";
     const googleMapsUrl = "https://maps.app.goo.gl/gQCgFJS1WadRNYtJ8";
 
@@ -42,7 +42,7 @@ const LocationModal = ({ isOpen, onClose }: LocationModalProps) => {
                         href={googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors font-medium"
+                        className="flex items-center justify-center gap-1 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors font-medium"
                     >
                         <MapPin size={18} />
                         Google Maps

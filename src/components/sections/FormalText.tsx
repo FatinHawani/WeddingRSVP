@@ -71,9 +71,9 @@ END:VCALENDAR`;
                     Menjemput Dato'/Datin/Tuan/Puan/Encik/Cik ke majlis perkahwinan putera-puteri kami
                 </p>
                 <div className="space-y-2">
-                    <p className="text-xl font-serif text-stone-800">Nama Pengantin Lelaki</p>
+                    <p className="text-xl font-serif text-stone-800">Muhammad Hanis Irfan bin Mohd Zaid</p>
                     <p className="text-stone-400 text-sm">&</p>
-                    <p className="text-xl font-serif text-stone-800">Nama Pengantin Perempuan</p>
+                    <p className="text-xl font-serif text-stone-800">Fatin Hawani binti Mohamad Fadzil</p>
                 </div>
             </motion.div>
 

@@ -102,7 +102,7 @@ const Guestbook = () => {
                     </div>
                 ) : wishes.length === 0 ? (
                     <div className="text-center text-stone-400 italic">
-                        Be the first to leave a wish!
+                        Hantarkan ucapan anda!
                     </div>
                 ) : (
                     <motion.div ref={carouselRef} className="overflow-hidden cursor-grab active:cursor-grabbing">
@@ -114,10 +114,10 @@ const Guestbook = () => {
                             {wishes.map((wish) => (
                                 <div
                                     key={wish.id}
-                                    className="min-w-[280px] md:min-w-[320px] bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/50 select-none shrink-0"
+                                    className="w-auto max-w-[280px] md:max-w-[320px] bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/50 select-none shrink-0"
                                 >
-                                    <p className="font-serif text-stone-700 italic mb-4 whitespace-pre-wrap">"{wish.message}"</p>
-                                    <p className="text-stone-500 text-sm font-medium text-right">- {wish.name}</p>
+                                    <p className="font-serif text-stone-700 italic mb-4 break-words">"{wish.message}"</p>
+                                    <p className="text-stone-500 text-sm font-medium text-right break-words">- {wish.name}</p>
                                 </div>
                             ))}
                         </motion.div>
@@ -155,10 +155,16 @@ const Guestbook = () => {
                             rows={4}
                             value={newWish.message}
                             onChange={(e) => setNewWish(prev => ({ ...prev, message: e.target.value }))}
+                            maxLength={200}
                             className="w-full px-4 py-2 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-rose-200"
                             placeholder="Write your wishes here..."
                             required
                         />
+                        <div className="flex justify-end mt-1">
+                            <span className={`text-xs ${newWish.message.length > 150 ? 'text-amber-600' : 'text-stone-400'}`}>
+                                {newWish.message.length}/200
+                            </span>
+                        </div>
                     </div>
                     <button
                         type="submit"
