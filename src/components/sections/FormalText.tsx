@@ -10,10 +10,12 @@ const FormalText = () => {
 
     const eventDetails = {
         title: "Walimatul Urus Hanis & Fatin",
-        description: "Jemputan Majlis Walimatul Urus Hanis & Fatin\n\nSurau di kiri dewan",
+        description: "Jemputan Majlis Walimatul Urus Hanis & Fatin\n\n" +
+            "La Pelangi Club House, Taman Pelangi Semenyih, 43500 Semenyih, Selangor\n\n" +
+            "7:30 PM - 10:30 PM",
         location: "La Pelangi Club House, Taman Pelangi Semenyih, 43500 Semenyih, Selangor",
-        startTime: "20260201T194500", // 7:45 PM - YYYYMMDDTHHMMSS format
-        endTime: "20260201T224500",   // 10:45 PM
+        startTime: "20260201T193000", // 7:30 PM - YYYYMMDDTHHMMSS format
+        endTime: "20260201T223000",   // 10:30 PM
     };
 
     const generateGoogleCalendarUrl = () => {
@@ -63,12 +65,12 @@ END:VCALENDAR`;
                     Dengan penuh kesyukuran ke hadrat Ilahi
                 </p>
                 <div className="space-y-2">
-                    <p className="text-xl font-serif text-stone-800">Keluarga Pengantin Lelaki</p>
+                    <p className="text-xl font-serif text-stone-800">Ummi Hani Abd Raof</p>
                     <p className="text-stone-400 text-sm">&</p>
-                    <p className="text-xl font-serif text-stone-800">Keluarga Pengantin Perempuan</p>
+                    <p className="text-xl font-serif text-stone-800">Mohamad Fadzil Jaafar <br></br>Hazalina Suratman</p>
                 </div>
                 <p className="text-stone-500 font-medium mt-8">
-                    Menjemput Dato'/Datin/Tuan/Puan/Encik/Cik ke majlis perkahwinan putera-puteri kami
+                    menjemput Dato'/Datin/Tuan/Puan/Encik/Cik<br></br>ke majlis perkahwinan putera-puteri kami
                 </p>
                 <div className="space-y-2">
                     <p className="text-xl font-serif text-stone-800">Muhammad Hanis Irfan bin Mohd Zaid</p>

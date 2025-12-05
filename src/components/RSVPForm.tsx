@@ -231,7 +231,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                                     onChange={handleChange}
                                     className="w-full px-2 py-2 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-rose-200"
                                 >
-                                    {[1, 2, 3, 4, 5].map(num => (
+                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                                         <option key={num} value={num}>{num}</option>
                                     ))}
                                 </select>
@@ -244,7 +244,7 @@ const RSVPForm = ({ onClose }: { onClose: () => void }) => {
                                     onChange={handleChange}
                                     className="w-full px-2 py-2 rounded-lg border border-stone-200 focus:outline-none focus:ring-2 focus:ring-rose-200"
                                 >
-                                    {[0, 1, 2, 3, 4, 5, 6, 7].map(num => (
+                                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                                         <option key={num} value={num}>{num}</option>
                                     ))}
                                 </select>

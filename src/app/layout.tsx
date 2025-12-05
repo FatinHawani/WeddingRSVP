@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Wedding RSVP",
-  description: "Join us for our special day",
+  title: "Jemputan Walilmatul Urus Hanis & Fatin",
+  description: "RSVP",
 };
 
 export default function RootLayout({
