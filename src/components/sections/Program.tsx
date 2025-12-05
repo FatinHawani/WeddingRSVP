@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 
 const Program = () => {
     const schedule = [
-        { time: "07:30 PM", event: "Kehadiran tetamu" },
+        { time: "07:45 PM", event: "Kehadiran tetamu" },
         { time: "08:00 PM", event: "Ketibaan pengantin" },
-        { time: "08:15 PM", event: "Akad Nikah" },
-        { time: "08:45 PM", event: "Sesi bergambar" },
-        { time: "09:00 PM", event: "Jamuan makan" },
-        { time: "10:30 PM", event: "Majlis bersurai" }
+        { time: "08:30 PM", event: "Akad Nikah" },
+        { time: "11:00 PM", event: "Majlis bersurai" }
     ];
 
     return (
