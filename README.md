@@ -1,6 +1,17 @@
-### This is Digital wedding invitation for my wedding
-### Tech stack : React, Node.js, Supabase
-### Deployed on Cloudflare 
+# 💍 WeddingRSVP: Digital Wedding Invitation
 
-### Do visit at https://www.cintahanisdanfatin.my/
+A custom-built web application to share event details and manage RSVPs for the wedding of Hanis and Fatin. 
 
+🌍 **Live Site:** [cintahanisdanfatin.my](https://www.cintahanisdanfatin.my/)
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React + Vite
+* **Backend / Database:** Supabase
+* **Hosting & Deployment:** Cloudflare
+
+## ✨ Features
+
+* **Digital RSVP:** Seamless guest attendance tracking directly to the Supabase database.
+* **Event Itinerary:** Details regarding the venue, schedule, and dress code.
+* **Responsive Design:** Optimized for a smooth experience across both mobile and desktop devices.
